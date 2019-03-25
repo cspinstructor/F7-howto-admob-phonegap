@@ -42,11 +42,12 @@ $$(document).on('pageInit', '.page[data-page="about"]', function(e) {
 
 //------ Admob ----------
 var admobid = {
-  banner: 'ca-app-pub-3940256099942544/6300978111',
-  interstitial: 'ca-app-pub-3940256099942544/1033173712',
-  rewardvideo: 'ca-app-pub-3940256099942544/5224354917'
-  // banner: 'ca-app-pub-5677932818243380/2569293910',
-  // interstitial: 'ca-app-pub-5677932818243380/7299586858',
+  // banner: 'ca-app-pub-3940256099942544/6300978111',
+  // interstitial: 'ca-app-pub-3940256099942544/1033173712',
+  // rewardvideo: 'ca-app-pub-3940256099942544/5224354917'
+  banner: 'ca-app-pub-5677932818243380/2569293910',
+  interstitial: 'ca-app-pub-5677932818243380/7299586858',
+  rewardvideo: 'ca-app-pub-5677932818243380/8751558889'
 };
 
 $$('#admobBanner').click(function() {
@@ -131,7 +132,7 @@ function registerAdEvents() {
     //alert(data.adType + ' ad leave');
   });
   document.addEventListener('onAdDismiss', function(data) {
-    alert(data.adType + ' ad dismissed');
+    // alert(data.adType + ' ad dismissed');
     if (data.adType === 'interstitial') {
       AdMob.prepareInterstitial({
         adId: admobid.interstitial,
