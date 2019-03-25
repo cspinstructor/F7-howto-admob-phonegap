@@ -159,7 +159,7 @@ function prepareAd(type) {
   }
   if (type === 'all') {
     initApp();
-
+    alert('prepareAd all ok');
     AdMob.prepareInterstitial({
       adId: admobid.interstitial,
       autoShow: false
