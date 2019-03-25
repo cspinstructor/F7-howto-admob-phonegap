@@ -1,0 +1,13 @@
+How To Admob Phonegap Apps
+
+app id:
+ca-app-pub-5677932818243380~3755572444
+
+banner id:
+ca-app-pub-5677932818243380/2569293910
+
+interstitial id:
+ca-app-pub-5677932818243380/7299586858
+
+rewarded id:
+ca-app-pub-5677932818243380/8751558889

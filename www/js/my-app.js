@@ -42,8 +42,10 @@ $$(document).on('pageInit', '.page[data-page="about"]', function(e) {
 
 //------ Admob ----------
 var admobid = {
-  banner: 'ca-app-pub-3940256099942544/6300978111',
-  interstitial: 'ca-app-pub-3940256099942544/1033173712'
+  // banner: 'ca-app-pub-3940256099942544/6300978111',
+  // interstitial: 'ca-app-pub-3940256099942544/1033173712'
+  banner: 'ca-app-pub-5677932818243380/2569293910',
+  interstitial: 'ca-app-pub-5677932818243380/7299586858'
 };
 
 $$('#admobBanner').click(function() {
