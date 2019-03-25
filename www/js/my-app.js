@@ -133,18 +133,43 @@ function registerAdEvents() {
   });
   document.addEventListener('onAdDismiss', function(data) {
     // alert(data.adType + ' ad dismissed');
-    if (data.adType === 'interstitial') {
-      AdMob.prepareInterstitial({
-        adId: admobid.interstitial,
-        autoShow: false
-      });
-    }
+    prepareAd(data.adType);
     if (data.adType === 'rewardvideo') {
-      AdMob.prepareRewardVideoAd({
-        adId: admobid.rewardvideo,
-        autoShow: false
-      });
-      alert('Here is your reward!');
+      alert('Here is your reward');
     }
   });
+}
+
+$$('.close-panel').click(function() {
+  prepareAd('all');
+});
+
+function prepareAd(type) {
+  if (type === 'interstitial') {
+    AdMob.prepareInterstitial({
+      adId: admobid.interstitial,
+      autoShow: false
+    });
+  }
+  if (type === 'rewardvideo') {
+    AdMob.prepareRewardVideoAd({
+      adId: admobid.rewardvideo,
+      autoShow: false
+    });
+  }
+  if (type === 'all') {
+    AdMob.createBanner({
+      adId: admobid.banner,
+      position: AdMob.AD_POSITION.BOTTOM_CENTER,
+      autoShow: false
+    });
+    AdMob.prepareInterstitial({
+      adId: admobid.interstitial,
+      autoShow: false
+    });
+    AdMob.prepareRewardVideoAd({
+      adId: admobid.rewardvideo,
+      autoShow: false
+    });
+  }
 }
