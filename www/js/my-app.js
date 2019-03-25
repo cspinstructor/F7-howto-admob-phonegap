@@ -144,6 +144,7 @@ function registerAdEvents() {
         adId: admobid.rewardvideo,
         autoShow: false
       });
+      alert('Here is your reward!');
     }
   });
 }
