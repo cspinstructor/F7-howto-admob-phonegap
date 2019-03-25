@@ -158,7 +158,7 @@ function prepareAd(type) {
     });
   }
   if (type === 'all') {
-    initAd();
+    initApp();
 
     AdMob.prepareInterstitial({
       adId: admobid.interstitial,
