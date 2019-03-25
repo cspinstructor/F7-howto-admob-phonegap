@@ -158,11 +158,8 @@ function prepareAd(type) {
     });
   }
   if (type === 'all') {
-    AdMob.createBanner({
-      adId: admobid.banner,
-      position: AdMob.AD_POSITION.BOTTOM_CENTER,
-      autoShow: false
-    });
+    initAd();
+
     AdMob.prepareInterstitial({
       adId: admobid.interstitial,
       autoShow: false
