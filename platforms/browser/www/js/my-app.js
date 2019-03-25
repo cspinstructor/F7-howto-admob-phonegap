@@ -132,10 +132,17 @@ function registerAdEvents() {
   });
   document.addEventListener('onAdDismiss', function(data) {
     alert(data.adType + ' ad dismissed');
-    // AdMob.prepareInterstitial({ adId: admobid.interstitial, autoShow: false });
-    // AdMob.prepareRewardVideoAd({
-    //   adId: admobid.rewardvideo,
-    //   autoShow: false
-    // });
+    if (data.adType === 'interstitial') {
+      AdMob.prepareInterstitial({
+        adId: admobid.interstitial,
+        autoShow: false
+      });
+    }
+    if (data.adType === 'rewardvideo') {
+      AdMob.prepareRewardVideoAd({
+        adId: admobid.rewardvideo,
+        autoShow: false
+      });
+    }
   });
 }
