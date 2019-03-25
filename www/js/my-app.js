@@ -42,10 +42,11 @@ $$(document).on('pageInit', '.page[data-page="about"]', function(e) {
 
 //------ Admob ----------
 var admobid = {
-  // banner: 'ca-app-pub-3940256099942544/6300978111',
-  // interstitial: 'ca-app-pub-3940256099942544/1033173712'
-  banner: 'ca-app-pub-5677932818243380/2569293910',
-  interstitial: 'ca-app-pub-5677932818243380/7299586858'
+  banner: 'ca-app-pub-3940256099942544/6300978111',
+  interstitial: 'ca-app-pub-3940256099942544/1033173712',
+  rewardvideo: 'ca-app-pub-3940256099942544/5224354917'
+  // banner: 'ca-app-pub-5677932818243380/2569293910',
+  // interstitial: 'ca-app-pub-5677932818243380/7299586858',
 };
 
 $$('#admobBanner').click(function() {
@@ -56,6 +57,10 @@ $$('#admobBanner').click(function() {
 $$('#admobInterstitial').click(function() {
   //createInterstitial();
   AdMob.showInterstitial();
+});
+
+$$('#admobRewardVideo').click(function() {
+  AdMob.showRewardVideoAd();
 });
 
 function initApp() {
@@ -91,6 +96,10 @@ function initAd() {
   AdMob.createBanner({
     adId: admobid.banner,
     position: AdMob.AD_POSITION.BOTTOM_CENTER,
+    autoShow: false
+  });
+  AdMob.prepareRewardVideoAd({
+    adId: admobid.rewardvideo,
     autoShow: false
   });
 }
