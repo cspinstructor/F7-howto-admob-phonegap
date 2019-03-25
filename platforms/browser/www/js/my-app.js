@@ -131,7 +131,11 @@ function registerAdEvents() {
     //alert(data.adType + ' ad leave');
   });
   document.addEventListener('onAdDismiss', function(data) {
-    //alert(data.adType + ' ad dismissed');
-    AdMob.prepareInterstitial({ adId: admobid.interstitial, autoShow: false });
+    alert(data.adType + ' ad dismissed');
+    // AdMob.prepareInterstitial({ adId: admobid.interstitial, autoShow: false });
+    // AdMob.prepareRewardVideoAd({
+    //   adId: admobid.rewardvideo,
+    //   autoShow: false
+    // });
   });
 }
