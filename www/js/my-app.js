@@ -111,46 +111,16 @@ function registerAdEvents() {
     ); // adType: 'banner' or 'interstitial'
   });
   document.addEventListener('onAdLoaded', function(data) {
-    alert(data.adType + ' ad loaded');
+    //alert(data.adType + ' ad loaded');
   });
   document.addEventListener('onAdPresent', function(data) {
-    alert(data.adType + ' ad present');
+    //alert(data.adType + ' ad present');
   });
   document.addEventListener('onAdLeaveApp', function(data) {
-    alert(data.adType + ' ad leave');
+    //alert(data.adType + ' ad leave');
   });
   document.addEventListener('onAdDismiss', function(data) {
-    alert(data.adType + ' ad dismissed');
+    //alert(data.adType + ' ad dismissed');
     AdMob.prepareInterstitial({ adId: admobid.interstitial, autoShow: false });
   });
-}
-
-function createSelectedBanner() {
-  // var overlap = document.getElementById('overlap').checked;
-  // var offsetTopBar = document.getElementById('offsetTopBar').checked;
-  // AdMob.createBanner({
-  //   adId: admobid.banner,
-  //   overlap: overlap,
-  //   offsetTopBar: offsetTopBar,
-  //   adSize: getSelectedAdSize(),
-  //   position: getSelectedPosition()
-  // });
-  AdMob.showBanner();
-}
-
-function createInterstitial() {
-  // var overlap = document.getElementById('overlap').checked;
-  // var offsetTopBar = document.getElementById('offsetTopBar').checked;
-  // AdMob.createBanner({
-  //   adId: admobid.banner,
-  //   overlap: overlap,
-  //   offsetTopBar: offsetTopBar,
-  //   adSize: getSelectedAdSize(),
-  //   position: getSelectedPosition()
-  // });
-  // AdMob.({
-  //   adId: admobid.interstitial,
-  //   autoShow: true
-  // });
-  AdMob.showInterstitial();
 }
