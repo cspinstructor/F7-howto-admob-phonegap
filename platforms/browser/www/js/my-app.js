@@ -53,15 +53,18 @@ var admobid = {
 $$('#admobBanner').click(function() {
   //createSelectedBanner();
   AdMob.showBanner(AdMob.AD_POSITION.BOTTOM_CENTER);
+  alert('showing banner');
 });
 
 $$('#admobInterstitial').click(function() {
   //createInterstitial();
   AdMob.showInterstitial();
+  alert('showing interstitial');
 });
 
 $$('#admobRewardVideo').click(function() {
   AdMob.showRewardVideoAd();
+  alert('showing reward video');
 });
 
 function initApp() {
