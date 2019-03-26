@@ -30,17 +30,17 @@ $$(document).on('pageInit', function(e) {
 
   if (page.name === 'about') {
     // Following code will be executed for page with data-page attribute equal to "about"
-    myApp.alert('Here comes About page');
+    //myApp.alert('Here comes About page');
   }
 });
 
 // Option 2. Using live 'pageInit' event handlers for each page
 $$(document).on('pageInit', '.page[data-page="about"]', function(e) {
   // Following code will be executed for page with data-page attribute equal to "about"
-  myApp.alert('Here comes About page');
+  //myApp.alert('Here comes About page');
 });
 
-//------ Admob ----------
+//------- Admob ----------
 var admobid = {
   banner: 'ca-app-pub-3940256099942544/6300978111',
   interstitial: 'ca-app-pub-3940256099942544/1033173712',
@@ -50,23 +50,6 @@ var admobid = {
   // rewardvideo: 'ca-app-pub-5677932818243380/8751558889'
 };
 
-$$('#admobBanner').click(function() {
-  //createSelectedBanner();
-  //alert('showing banner');
-  //AdMob.showBanner(AdMob.AD_POSITION.BOTTOM_CENTER);
-});
-
-$$('#admobInterstitial').click(function() {
-  //createInterstitial();
-  //alert('showing interstitial');
-  //AdMob.showInterstitial();
-});
-
-$$('#admobRewardVideo').click(function() {
-  //alert('showing reward video');
-  //AdMob.showRewardVideoAd();
-});
-
 function initApp() {
   if (!AdMob) {
     alert('admob plugin not ready');
@@ -74,8 +57,6 @@ function initApp() {
   }
 
   initAd();
-  // display a banner at startup
-  //createSelectedBanner();
 }
 
 function initAd() {
@@ -162,7 +143,7 @@ function prepareAd(type) {
   }
   if (type === 'all') {
     initApp();
-    alert('prepareAd all ok');
+
     AdMob.prepareInterstitial({
       adId: admobid.interstitial,
       autoShow: false
@@ -174,17 +155,15 @@ function prepareAd(type) {
   }
 }
 
+//--- called from onClick() inline in html pages ---
 function showBanner() {
-  //alert('onclick showbanner works');
   AdMob.showBanner(AdMob.AD_POSITION.BOTTOM_CENTER);
 }
 
 function showInterstitial() {
-  //alert('onclick showbanner works');
   AdMob.showInterstitial();
 }
 
 function showRewardVideo() {
-  //alert('onclick showbanner works');
   AdMob.showRewardVideoAd();
 }
