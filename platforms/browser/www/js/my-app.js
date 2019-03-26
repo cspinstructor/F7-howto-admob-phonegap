@@ -52,18 +52,18 @@ var admobid = {
 
 $$('#admobBanner').click(function() {
   //createSelectedBanner();
-  alert('showing banner');
+  //alert('showing banner');
   //AdMob.showBanner(AdMob.AD_POSITION.BOTTOM_CENTER);
 });
 
 $$('#admobInterstitial').click(function() {
   //createInterstitial();
-  alert('showing interstitial');
+  //alert('showing interstitial');
   //AdMob.showInterstitial();
 });
 
 $$('#admobRewardVideo').click(function() {
-  alert('showing reward video');
+  //alert('showing reward video');
   //AdMob.showRewardVideoAd();
 });
 
@@ -175,5 +175,16 @@ function prepareAd(type) {
 }
 
 function showBanner() {
-  alert('onclick showbanner works');
+  //alert('onclick showbanner works');
+  AdMob.showBanner(AdMob.AD_POSITION.BOTTOM_CENTER);
+}
+
+function showInterstitial() {
+  //alert('onclick showbanner works');
+  AdMob.showInterstitial();
+}
+
+function showRewardVideo() {
+  //alert('onclick showbanner works');
+  AdMob.showRewardVideoAd();
 }
