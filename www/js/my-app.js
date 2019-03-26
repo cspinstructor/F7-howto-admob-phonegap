@@ -53,18 +53,18 @@ var admobid = {
 $$('#admobBanner').click(function() {
   //createSelectedBanner();
   alert('showing banner');
-  AdMob.showBanner(AdMob.AD_POSITION.BOTTOM_CENTER);
+  //AdMob.showBanner(AdMob.AD_POSITION.BOTTOM_CENTER);
 });
 
 $$('#admobInterstitial').click(function() {
   //createInterstitial();
   alert('showing interstitial');
-  AdMob.showInterstitial();
+  //AdMob.showInterstitial();
 });
 
 $$('#admobRewardVideo').click(function() {
   alert('showing reward video');
-  AdMob.showRewardVideoAd();
+  //AdMob.showRewardVideoAd();
 });
 
 function initApp() {
