@@ -92,6 +92,7 @@ function initAd() {
 // optional, in case respond to events or handle error
 function registerAdEvents() {
   // new events, with variable to differentiate: adNetwork, adType, adEvent
+  // comment out for production
   document.addEventListener('onAdFailLoad', function(data) {
     alert(
       'error: ' +
@@ -104,19 +105,12 @@ function registerAdEvents() {
         data.adType +
         ', adEvent:' +
         data.adEvent
-    ); // adType: 'banner' or 'interstitial'
+    ); // adType: 'banner' or 'interstitial' or 'rewardvideo'
   });
-  document.addEventListener('onAdLoaded', function(data) {
-    //alert(data.adType + ' ad loaded');
-  });
-  document.addEventListener('onAdPresent', function(data) {
-    //alert(data.adType + ' ad present');
-  });
-  document.addEventListener('onAdLeaveApp', function(data) {
-    //alert(data.adType + ' ad leave');
-  });
+  document.addEventListener('onAdLoaded', function(data) {});
+  document.addEventListener('onAdPresent', function(data) {});
+  document.addEventListener('onAdLeaveApp', function(data) {});
   document.addEventListener('onAdDismiss', function(data) {
-    // alert(data.adType + ' ad dismissed');
     prepareAd(data.adType);
     if (data.adType === 'rewardvideo') {
       alert('Here is your reward');
