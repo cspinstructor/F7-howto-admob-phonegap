@@ -173,3 +173,7 @@ function prepareAd(type) {
     });
   }
 }
+
+function showBanner() {
+  alert('onclick showbanner works');
+}
