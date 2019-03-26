@@ -1,5 +1,5 @@
 How To Admob Phonegap Apps
-
+[ Live Ads ]
 app id:
 ca-app-pub-5677932818243380~3755572444
 
@@ -11,3 +11,10 @@ ca-app-pub-5677932818243380/7299586858
 
 rewarded id:
 ca-app-pub-5677932818243380/8751558889
+
+
+-----------------------------------------
+
+[ Test Ads ]
+banner: 'ca-app-pub-3940256099942544/6300978111',
+interstitial: 'ca-app-pub-3940256099942544/1033173712'
